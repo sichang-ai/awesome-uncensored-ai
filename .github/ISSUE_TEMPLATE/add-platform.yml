@@ -1,0 +1,41 @@
+name: 补充平台
+description: 推荐一个应当收录的平台或工具
+labels: ["新增平台"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 平台名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 官方链接
+      description: 请给官方域名。山寨应用很多，我们需要能确认的官方入口。
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 对话与角色扮演
+        - 图像生成
+        - 视频生成
+        - 语音与音频
+        - 工具与本地部署
+    validations:
+      required: true
+  - type: textarea
+    id: policy
+    attributes:
+      label: 内容政策
+      description: 请附其服务条款/社区准则的链接与相关原文。我们以官方条款为准，不采信三方评测的转述。
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么值得收录
+      description: 有多少真实用户？有什么是别家没有的？

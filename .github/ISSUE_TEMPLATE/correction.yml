@@ -1,0 +1,24 @@
+name: 纠错
+description: 指出过期或不实的信息
+labels: ["纠错"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 哪里错了
+      description: 请指明章节与原文。
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正确的信息是什么
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 来源链接
+      description: 优先官方页面。
+    validations:
+      required: true
