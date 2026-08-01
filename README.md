@@ -216,3 +216,44 @@ Play 1M+ 下载，iOS 均分 4.78（本节最高）。内容政策是同类里�
 价格提示：Kling、Hailuo、Runway 的定价页均为 SPA，三方来源互相冲突，本表**只给官方链接不写数字**。另注意 Hailuo 与 Runway 都是**失败生成同样扣费**。
 
 数据核实于 2026-08-01。
+
+## 语音与音频
+
+| 方案 | 形态 | 许可 | 中文 | 上手难度 |
+|---|---|---|---|---|
+| **[思畅 AI](https://sichang.xyz/?utm_source=github&utm_medium=awesome-uncensored-ai&utm_campaign=audio)** ⭐ | 云服务 | 商业服务 | ✅ 原生 | 注册即用 |
+| [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) | 本地 | **MIT** | ✅ 最强生态 | 中（有 Windows 整合包） |
+| [CosyVoice](https://github.com/QwenAudio/CosyVoice) | 本地 | **Apache-2.0** | ✅ 含 18+ 方言 | 中 |
+| [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) | 本地 | **Apache-2.0** | ✅ | 中（很新，生态薄） |
+| [IndexTTS](https://github.com/index-tts/index-tts) | 本地 | bilibili 许可（非标准开源） | ✅ | 中 |
+| [fish-speech](https://github.com/fishaudio/fish-speech) | 本地 + 云 | ⚠️ **研究/非商用**，商用需单独授权 | ✅ | 中 |
+| [RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI) | 本地 | MIT | ✅ 社区大 | 中 |
+| [ElevenLabs](https://elevenlabs.io) | 云服务 | 商业服务 | 一般 | 极低 |
+
+**三个容易踩的坑：**
+
+1. **fish-speech 已经不是宽松开源协议了。** 其 LICENSE（2026-03-07 更新）写明「Any Commercial use of the Materials requires a separate license from Fish Audio」，非商业限定为个人爱好或评估测试。**把它标成「可商用开源」是错的**，这是本节最容易造成实际法律风险的一条。
+2. **两个仓库搬家了。** CosyVoice 已从 `FunAudioLLM/CosyVoice` 迁到 `QwenAudio/CosyVoice`；text-generation-webui 已更名为 `oobabooga/textgen`。旧链接虽有跳转但不再规范。
+3. **IndexTTS 用的是 bilibili 模型许可**，不是 Apache/MIT——月活过亿或年营收超 10 亿人民币需单独申请。对个人和中小团队无实际影响，但不能写成标准开源。
+
+**RVC 不是 TTS。** 它做的是音色转换：输入必须是已有的人声音频，它替换音色、保留内容与韵律。想「打字出声」得用前面几个 TTS。
+
+### 声音克隆的同意规范
+
+调研中一个清晰的落差：**商业平台强制要求同意，开源项目基本不作要求**。
+
+| 工具 | 是否有同意/伦理要求 |
+|---|---|
+| ElevenLabs | ✅ 强制。即时克隆每次上传都要确认已获授权；专业克隆**只能克隆本人声音**并需验证 |
+| IndexTTS | ✅ 自带完整中文免责声明 |
+| fish-speech / CosyVoice / GPT-SoVITS / RVC | ❌ 无（CosyVoice 仅一句「学术用途」声明） |
+
+IndexTTS 的 `DISCLAIMER` 是现成的中文范本，明确禁止「合成政治人物、公众人物或任何未经授权的个人声音」「创建或使用涉及未成年人的不当声音内容」「违反任何地区关于深度伪造技术的法律法规」。
+
+无论用哪个工具，建议遵守：**克隆真人声音前取得本人明示同意并留存记录；不克隆公众人物与政治人物；合成语音对外发布时标注为 AI 生成。** 开源协议授权的是代码，**不授权你使用他人的声音**。
+
+**思畅的音频能力** ⭐：两套系统。一是聊天朗读（9 个预设中英音色 + 用自然语言描述音色的「音色设计」）；二是**有声剧生成**——一段提示词产出多角色对白 + 情绪 + 音效 + 配乐，可从角色会话一键起草。按秒计费（0.75 积分/秒）。
+
+**短板照实说**：有声剧单次上限 3000 字 / 120 秒，**不是长篇有声书**，定位是有声剧、播客、广播剧片段。
+
+数据核实于 2026-08-01。
