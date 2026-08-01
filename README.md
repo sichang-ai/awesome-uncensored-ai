@@ -165,3 +165,54 @@ Play 1M+ 下载，iOS 均分 4.78（本节最高）。内容政策是同类里�
 > **Replika** 2026-03-30 的 ToS 仍明文禁止 obscene / pornographic 内容，已重定位为 wellness 产品；2025 年另因数据合规被意大利 Garante 处以 €500 万罚款（认定自 2023-02-02 起处理个人数据无合法性基础、声称排除未成年人却无有效年龄验证）。
 
 数据核实于 2026-08-01。
+
+## 图像生成
+
+| 方案 | 形态 | 中文提示词 | 成人内容 | 门槛 |
+|---|---|---|---|---|
+| **[思畅 AI](https://sichang.xyz/?utm_source=github&utm_medium=awesome-uncensored-ai&utm_campaign=image)** ⭐ | 云服务 | ✅ | ✅ 9 个模型中 6 个无限制 | 注册即用 |
+| [Civitai](https://civitai.com) | 云 + 模型下载 | 取决于模型 | ✅ 但已迁至 `civitai.red` | 注册；NSFW 侧仅收加密货币 |
+| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | 本地 | 取决于模型 | ✅ 无平台策略 | 需 GPU，学习曲线陡 |
+| [Qwen-Image](https://github.com/QwenLM/Qwen-Image) | 本地权重 | ✅ **最强** | 取决于部署 | 12–24GB 显存 |
+| [Venice.ai](https://venice.ai) | 云服务 | 未核实 | ✅ 少量硬红线 | 免费档每天 15 张 |
+| [SeaArt](https://www.seaart.ai) | 云服务 | ✅ 中文界面 | ⚠️ 官方条款明文禁止 | 注册即用 |
+| [Tensor.Art](https://tensor.art) | 云服务 | 取决于模型 | ❌ 主站 2025-11 转全 SFW | 注册即用 |
+| [A1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | 本地 | ❌ | ✅ 无平台策略 | **已停更，不推荐新用户** |
+
+**几条会让旧教程失效的变化：**
+
+- **Civitai 换域名了。** 2026-04-16 起 `civitai.com` 只有 SFW 内容，完整目录在 `civitai.red`。账号通用，但货币分色：Green Buzz（信用卡，仅 SFW）、Yellow Buzz（**仅加密货币**，用于 NSFW）、Blue Buzz（任务赚取）。会员只能在 SFW 站用信用卡购买。这是支付通道压力最直白的产物。
+- **Tensor.Art 主站 2025-11-27 起转为全 SFW**，成人内容迁至独立站 TensorHub，且 TensorHub 用单价更高的 Token，不接受免费额度兑换。
+- **SeaArt 的条款与传闻不符。** 官方服务条款（2025-07-19 生效）§5.1 明文禁止色情内容与公众人物肖像，而多个三方评测称其对已验证成年人开放露骨内容。**本表以官方条款为准**，并提醒这种落差意味着规则不可预期。
+- **A1111 已停更。** master 分支最后提交 2024-07-27，最新 release 是 2025-02-09。星标仍在涨但代码近两年没动，跑不了新模型。活跃替代是 ComfyUI。
+
+**思畅的图像能力** ⭐：9 个模型（Z-Image Turbo、Chroma、Anime、Lustify、Seedream V5 Pro/Lite、Grok Imagine ×2、GPT Image 2），其中 6 个标记为无限制。支持 1:1 / 16:9 / 9:16，Seedream V5 Pro 支持 2K。除生成外有提示词增强、图生图编辑与多图合成。每日 1 张免费额度，生成 10 积分、编辑/合成各 40 积分。
+
+**关于本地部署的显存**：SD1.5 约 4–6GB，SDXL 约 6–8GB，Flux.1 dev FP8 约 12GB，Qwen-Image FP8 约 12–16GB（GGUF 量化可低至 6GB，未量化需 24GB+）。这些是社区实测汇总的数量级，非官方数字。
+
+数据核实于 2026-08-01。
+
+## 视频生成
+
+| 方案 | 形态 | 许可 / 政策 | 中文提示词 | 显存 |
+|---|---|---|---|---|
+| **[思畅 AI](https://sichang.xyz/?utm_source=github&utm_medium=awesome-uncensored-ai&utm_campaign=video)** ⭐ | 云服务 | 成人内容开放 | ✅ | 无 |
+| [Wan 2.2](https://github.com/Wan-Video/Wan2.2) | 本地权重 | **Apache-2.0**（最宽松） | ✅ 原生 | TI2V-5B 24GB；A14B 80GB |
+| [HunyuanVideo-1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | 本地权重 | 腾讯社区许可（**非 OSI 开源**） | ✅ 原生 | **14GB**（开 offload） |
+| [Kling 可灵](https://kling.ai) | 云服务 | 禁止性露骨内容 | ✅ 原生 | 无 |
+| [Hailuo 海螺](https://hailuoai.video) | 云服务 | 受中国大陆法规约束 | ✅ 原生 | 无 |
+| [Runway](https://runway.com) | 云服务 | 限制最多（合规基线） | 未核实 | 无 |
+| ~~Sora~~ | — | **已停服** | — | — |
+
+**必须知道的四件事：**
+
+1. **Sora 已经停了。** 网页与 App 于 2026-04-26 关停，API 于 2026-09-24 关停。OpenAI 的说法是把资源转向编程工具与企业客户。它作为「最严格的合规路线也未必活得久」的实证，比作为对照组更有意义。
+2. **Wan 2.5 / 2.6 不开源。** 能本地跑的最新版本仍是 **Wan 2.2**（2025-07-28，Apache 2.0）。2.5 与 2.6 只有阿里云 API，权重从未发布。判断依据很硬：`github.com/Wan-Video` 组织下只有 5 个公开仓库，没有 2.5/2.6。
+3. **开源 ≠ 无限制。** Wan 2.2 是 Apache-2.0，真正宽松；HunyuanVideo 用的是腾讯社区许可，**含地域排除（欧盟、英国、韩国不适用）、月活过亿需另行申请、禁止用其输出训练竞品**。商用前需法务确认，不能和 Apache 混为一谈。
+4. **走中国大陆云 API 就落入当地法规。** Wan 2.5/2.6 只有阿里云一条路，Kling 与 Hailuo 同理——实名、内容受审是法定义务。Kling 的国际站（Kling AI Pte. Ltd., 新加坡）与中国大陆站（北京快手科技）是**不同法律实体、不同监管环境**，别混谈。
+
+**思畅的视频能力** ⭐：基于 WaveSpeed，四种模式——文生视频、图生视频、参考图生视频、视频延长。模型含 Wan 2.7 / 2.2、Seedance 2.0（含 Fast）、LTX 2.3 等，5–15 秒，480p–1080p，延长可到 4K。全部标记为无限制。2026-07-07 从 Venice 切换到 WaveSpeed，原因是 Venice 的供应商层内容审查误拦了约 40% 的成人内容。生成结果免费用户留存 90 天、订阅用户永久。
+
+价格提示：Kling、Hailuo、Runway 的定价页均为 SPA，三方来源互相冲突，本表**只给官方链接不写数字**。另注意 Hailuo 与 Runway 都是**失败生成同样扣费**。
+
+数据核实于 2026-08-01。
