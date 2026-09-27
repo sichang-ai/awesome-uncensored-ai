@@ -357,6 +357,7 @@ IndexTTS 的 `DISCLAIMER` 是现成的中文范本，明确禁止「合成政治
 | [LM Studio](https://lmstudio.ai) | 桌面客户端 | **闭源** | 最低 | ❌ |
 | [textgen](https://github.com/oobabooga/textgen) | 多后端桌面应用 | AGPL-3.0 | 中，有便携版 | ❌ |
 | [OpenRouter](https://openrouter.ai) | 模型聚合 API | 商业服务 | 低，注册拿 key | ❌ 界面英文 |
+| [SpicyAPI](https://spicyapi.ai) | 无审查图像 / 图生视频 / 文本模型聚合 API，另有开源 [Agent Skill](https://github.com/Spicy-API/nsfw-ai-skill)、[MCP](https://github.com/Spicy-API/spicy-mcp) 与 [资源清单](https://github.com/Spicy-API/awesome-nsfw-ai) | 商业服务（skill / MCP 为 MIT） | 低，注册拿 key，按量付费 | ❌ 界面英文（另有日 / 韩 / 法 / 西等） |
 
 **选型建议：**
 
