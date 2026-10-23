@@ -112,6 +112,8 @@ HuggingFace 上带 `abliterated` 或 `uncensored` 标记的模型各自都超过
 
 不想碰硬件就走这条。思畅、Venice 等平台已经把这类模型接好了——你直接用，不用管量化和显存。代价是数据要过别人的服务器，且平台自己的红线依然生效。
 
+- **Red Team Model Router**（unst33r.si）：面向授权红队测试的 OpenAI 兼容 API，聚合 gpt-oss、Llama、Qwen 等 abliterated / 低拒绝开源模型，按 token 计费，无需本地显卡。（利益披露：提交者为该服务运营方成员）
+
 ### 另一条路线：微调，而不是消融
 
 abliteration 是**事后改权重**，快且便宜。另一条更传统的路线是**在无拒绝的数据集上微调**——Dolphin 系列是这一路的代表。
