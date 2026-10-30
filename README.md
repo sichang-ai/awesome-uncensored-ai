@@ -112,6 +112,8 @@ HuggingFace 上带 `abliterated` 或 `uncensored` 标记的模型各自都超过
 
 不想碰硬件就走这条。思畅、Venice 等平台已经把这类模型接好了——你直接用，不用管量化和显存。代价是数据要过别人的服务器，且平台自己的红线依然生效。
 
+- **Outrun**（[outrun.to](https://outrun.to/uncensored-ai-api)）：预付费的 OpenAI 兼容 API，一个 key 同时调用 GLM-5.3、DeepSeek V4 Pro、MiMo V2.6 等模型的 uncensored / abliterated 版本，以及 GPT、Claude、Gemini 等常规模型；每个模型单独标价，按用量计费。官方说明 abliterated 版本旨在减少拒答，但回复仍可能不同。条款对所有模型（包括 Uncensored、Abliterated、图像和视频模型）一律禁止 CSAM 及涉及未满 18 岁者的性内容。界面为英文。
+
 ### 另一条路线：微调，而不是消融
 
 abliteration 是**事后改权重**，快且便宜。另一条更传统的路线是**在无拒绝的数据集上微调**——Dolphin 系列是这一路的代表。
