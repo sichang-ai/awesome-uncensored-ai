@@ -112,6 +112,8 @@ HuggingFace 上带 `abliterated` 或 `uncensored` 标记的模型各自都超过
 
 不想碰硬件就走这条。思畅、Venice 等平台已经把这类模型接好了——你直接用，不用管量化和显存。代价是数据要过别人的服务器，且平台自己的红线依然生效。
 
+- **UberLLM**（[uberllm.dev](https://uberllm.dev/zh/uncensored-llm-api)）：预付费的 OpenAI / Anthropic 兼容 API，一个 key 同时调用 DeepSeek V4.1 Flash、Gemma 4、GLM 4.7 Flash Heretic、Venice Uncensored、Qwen 3.6 Plus 等模型的 uncensored / abliterated 版本，以及 GPT、Claude、Gemini 等常规模型；每个请求由该模型的第三方服务商处理，按其实际收费从余额扣款，请求本身不另收费，银行卡充值收取 5.5% + $0.50 手续费，无免费额度。条款禁止违法用途及涉及未成年人的性内容。网站提供简体中文界面。
+
 ### 另一条路线：微调，而不是消融
 
 abliteration 是**事后改权重**，快且便宜。另一条更传统的路线是**在无拒绝的数据集上微调**——Dolphin 系列是这一路的代表。
