@@ -197,6 +197,7 @@ abliteration 是**事后改权重**，快且便宜。另一条更传统的路线
 | [SpicyChat](https://spicychat.ai) | ❌ | ✅ | 未核实 | 免费 / $5 / $14.95 / $24.95 | 未核实 |
 | [Chub AI](https://chub.ai) | ❌ | ✅ 自述 uncensored | 未核实 | 见官方页 | 未核实 |
 | [Janitor AI](https://janitorai.com) | ❌ | ✅（分级 18+） | 未核实 | 见官方页 | 未核实 |
+| [HoneyChat.bot](https://honeychat.bot/en/) | ✅ 繁體中文 | ✅（非露骨，仅 18+） | 受限 | 免费 / 起 $4.99/月 | 仅经同意（Data Consent） |
 | 星野 / 猫箱 / 筑梦岛 | ✅ | ❌ 法规不允许 | ❌ | ¥9–¥36/月 | 见各家隐私政策 |
 
 「未核实」是诚实标注，不是遗漏：Janitor AI 全站对自动化访问返回 403，Chub 的条款与定价页在 Cloudflare 后面，我们无法取得原文，因此不猜。
