@@ -112,6 +112,8 @@ HuggingFace 上带 `abliterated` 或 `uncensored` 标记的模型各自都超过
 
 不想碰硬件就走这条。思畅、Venice 等平台已经把这类模型接好了——你直接用，不用管量化和显存。代价是数据要过别人的服务器，且平台自己的红线依然生效。
 
+- **Morse**（[trymorse.ai/inference](https://trymorse.ai/inference/?src=gh-awesomeuncensored)）：私密推理 API，兼容 OpenAI 接口（也支持 Anthropic Messages 与 Responses 格式），用普通 API key 即可调用 DeepSeek V4.1 Flash 1017 Uncensored（`deepseek-ai/deepseek-v4.1-flash-1017-abliterated`，1M 上下文，输入 $0.375 / 输出 $1.50 每百万 token）以及 Kimi K3.1 Pro、GLM-5.3 的无审查版，同一个 key 也能调用常规开源模型。所有层级零数据留存，提示词与回复都不存储；enclave 代码开源（[trymorse/morse-enclave](https://github.com/trymorse/morse-enclave)），可用 `npx @askmorse/verify inference.trymorse.ai` 自行验证。按量付费，$5 起充，银行卡支付，邮箱注册，无需 KYC。
+
 ### 另一条路线：微调，而不是消融
 
 abliteration 是**事后改权重**，快且便宜。另一条更传统的路线是**在无拒绝的数据集上微调**——Dolphin 系列是这一路的代表。
